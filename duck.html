@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Kodune 5</title>
+<style type="text/css">
+	#esimene{width: 100px; height: 100px; position: fixed; top: 350px; left: 200px;}
+	.mark {position: absolute; border-radius: 50%;}
+	.mark:nth-child(1) {height: 100%; width: 100%; background-color: white; border: solid; border-color: white;}
+	.mark:nth-child(2) {height: 80%;  width: 80%;  background-color: red;   border: solid; border-color: red;   left:10%; top:10%; }
+	.mark:nth-child(3) {height: 60%;  width: 60%;  background-color: white; border: solid; border-color: white; left:20%; top:20%; }
+	.mark:nth-child(4) {height: 40%;  width: 40%;  background-color: red;   border: solid; border-color: red;   left:30%; top:30%; }
+	.mark:nth-child(5) {height: 20%;  width: 20%;  background-color: white; border: solid; border-color: white; left:40%; top:40%; }
+	img {position: fixed; bottom: 300px; left: 0px;}
+	body {background-color: #0A24A9;}
+</style>
+</head>
+<body>
+	<img id="pilt" src="duck.png" alt="Duck"/>
+	<div id="esimene">
+		<div class="mark">
+		</div>
+		<div class="mark">
+		</div>
+		<div class="mark">
+		</div>
+		<div class="mark">
+		</div>
+		<div class="mark">
+		</div>
+	</div>
+	<script>
+	window.onload = function() {
+		var element = document.getElementById('esimene');
+		element.onclick=function(){
+			element.style.top = (Math.random() * 350 ) + "px";
+			element.style.left = (Math.random() * 600 ) + "px";
+		}
+	}
+</script>
+</body>
+</html>
